@@ -25,6 +25,8 @@ function Login() {
     }, [user, pwd]);
 
     async function handleSubmit(e: React.FormEvent) {
+        console.log('sumbmitted');
+
         e.preventDefault();
         try {
             const userData = await login({ user, pwd }).unwrap();
@@ -81,8 +83,8 @@ function Login() {
                         onChange={handlePwdInput}
                         required
                     />
+                    <button>Sing in</button>
                 </form>
-                <button>Sing in</button>
             </section>
         );
 
